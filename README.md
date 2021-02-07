@@ -1,5 +1,7 @@
 # **discord-richpresence**
 
+## ⚠️ **We have no certainty that using this code is authorized by the T.O.S. of Discord and therefore at your own risk.** ⚠️
+
 ## How to install ?
 
 ```bash
