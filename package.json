@@ -1,0 +1,18 @@
+{
+  "name": "discord-richpresence",
+  "version": "1.0.0",
+  "description": "Make Discord RPC",
+  "main": "rpc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "Sayrix",
+  "license": "ISC",
+  "dependencies": {
+    "discord-rpc": "^3.1.4",
+    "discord.js": "^12.5.1"
+  }
+}
