@@ -18,7 +18,7 @@ const config = {
 
 const client = new rpc.Client({transport: 'ipc'});
 
-rpc.register(bot.user.id);
+rpc.register(config.discordId);
 
 client.on('ready', () => {
 	console.log('RPC Started');

@@ -1,18 +1,23 @@
 {
   "name": "discord-richpresence",
   "version": "1.0.0",
-  "description": "Make Discord RPC",
+  "description": "Make DiscordRPC",
   "main": "rpc.js",
+  "dependencies": {
+    "discord-rpc": "^3.2.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "discord"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sayrix/discord-richpresence.git"
+  },
   "author": "Sayrix",
   "license": "ISC",
-  "dependencies": {
-    "discord-rpc": "^3.1.4",
-    "discord.js": "^12.5.1"
-  }
+  "bugs": {
+    "url": "https://github.com/Sayrix/discord-richpresence/issues"
+  },
+  "homepage": "https://github.com/Sayrix/discord-richpresence#readme"
 }
