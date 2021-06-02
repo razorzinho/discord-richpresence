@@ -1,8 +1,7 @@
 const rpc = require('discord-rpc');
-const Discord = require('discord.js');
 
 const config = {
-	token: "XXXXXXXX", //Application token
+	discordId: "XXXXXXXX", //Discord Id
 	appId: "XXXXXXXX", //Id of your application
 
 	details: "XXXXXXXX", //Your descriptions
@@ -17,37 +16,34 @@ const config = {
 	buttonTwoUrl: "https://chilledbot.xyz/freenitro" //URL of the button
 };
 
-const bot = new Discord.Client();
 const client = new rpc.Client({transport: 'ipc'});
 
-bot.on('ready', () => {
-	client.login({clientId: bot.user.id});
-	rpc.register(bot.user.id);
-	client.on('ready', () => {
-		console.log('RPC Started');
-		client.request('SET_ACTIVITY', {
-			pid: 9999,
-			activity: {
-				details: config.details,
-				assets: {
-					large_image: config.largeImageKeyName,
-					large_text: config.largeImageText,
-					small_image: config.smallImageKeyName,
-					small_text: config.smallImageText,
+rpc.register(bot.user.id);
+
+client.on('ready', () => {
+	console.log('RPC Started');
+	client.request('SET_ACTIVITY', {
+		pid: 9999,
+		activity: {
+			details: config.details,
+			assets: {
+				large_image: config.largeImageKeyName,
+				large_text: config.largeImageText,
+				small_image: config.smallImageKeyName,
+				small_text: config.smallImageText,
+			},
+			buttons: [
+				{
+					label: config.buttonOneName,
+					url: config.buttonOneUrl
 				},
-				buttons: [
-					{
-						label: config.buttonOneName,
-						url: config.buttonOneUrl
-					},
-					{
-						label: config.buttonTwoName,
-						url: config.buttonTwoUrl
-					}
-				]
-			}
-		});
+				{
+					label: config.buttonTwoName,
+					url: config.buttonTwoUrl
+				}
+			]
+		}
 	});
 });
 
-bot.login(config.token);
+client.login(config.discordId);
