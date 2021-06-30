@@ -26,4 +26,4 @@ node .
 
 ## Many thanks to the people who will put a ⭐!
 ­
-#### *inspired by [TapsHTS](https://github.com/TapsHTS/discord-rpc)*
+#### *inspired by [TapsHTS](https://github.com/TapsHTS/)*
